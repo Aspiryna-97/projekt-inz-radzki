@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Aplikacja BHP - Projekt Inżynierski - Radzki Wojciech</title>
+    <meta name="description" content="Witaj w aplikacji BHP. Aplikacja została zaprojektowana jako projekt inżynierski przez Wojtka Radzkiego.
+    Jej celem jest pomoc w kryzysowych sytuacjach oraz wsparcie Twojej wiedzy z zakresu Bezpieczeństwa i Higieny Pracy">
+    <meta name="author" content="Wojtek Radzki">
+    <meta name="keywords" content="BHP, WSZOP, Projekt">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="https://wszop.edu.pl/wp-content/uploads/2021/03/cropped-wszop-icon-192x192.png">
+    <script>
+       function coSieWydarzylo(wydarzenie) {
+        if (wydarzenie === "zlamanie") {
+          var rodzajZlamania = prompt("Jaki rodzaj złamania nastąpił?\n1. Złamanie otwarte\n2. Złamanie zamknięte");
+          if (rodzajZlamania === "1") {
+            alert("Przy użyciu opatrunku jałowego zabezpiecz ranę oraz wystającą kość, zatamuj krwawienie. Następnie unieruchom kończynę w pozycji zastanej wraz z 2 sąsiednimi stawami. W razie zagrożenia dla życia i zdrowia wezwij pomoc pod numerem 112. W innej sytuacji udaj się na Izbę przyjęć.");
+          } else if (rodzajZlamania === "2") {
+            alert("Zabezpiecz przy użyciu szyny kończynę w pozycji zastanej - unieruchom złamaną kość oraz 2 sąsiednie stawy. Udaj się na Izbę przyjęć.");
+          } else {
+            alert("Nieprawidłowy wybór rodzaju złamania.");
+          }
+        } else if (wydarzenie === "akcjaSerca") {
+          var reakcja = prompt("Czy poszkodowany reaguje na pytania?\n1. Tak\n2. Nie");
+          if (reakcja === "1") {
+            alert("Wezwij pomoc pod numerem 112 i obserwuj poszkodowanego.");
+          } else if (reakcja === "2") {
+            var oddechy = prompt("Czy poszkodowany w ciągu 10 sekund wykonał przynajmniej 2 poprawne wdechy?\n1. Tak\n2. Nie");
+            if (oddechy === "1") {
+              alert("Wezwij pomoc pod numerem 112 i obserwuj poszkodowanego.");
+            } else if (oddechy === "2") {
+              var oddechyPonownie = prompt("ROZPOCZNIJ MASAŻ SERCA! Wykonaj 30 uciśnięć klatki piersiowej. Jeśli to możliwe, każ osobie, która znajduje się w pobliżu znaleźć i przynieść defibrylator AED. Po wykonaniu 30 uciśnięć, sprawdź ponownie, czy poszkodowany oddycha.\n1. Tak\n2. Nie");
+              if (oddechyPonownie === "1")
+              {
+                alert("Ułóż poszkodowanego w pozycji bezpiecznej i obserwuj go do czasu przejęcia go przez ZRM")
+              } else if (oddechyPonownie === "2")
+              {alert("Ponownie wykonaj 30 uciśnięć i sprawdź oddech. Wykonuj to do momentu, aż poszkodowany zacznie znowu oddychać, zaistnieje niebezpieczeństwo w miejscu w którym się znajdujesz, będziesz wyczerpany bądź poszkodowany zostanie przejęty przez ZRM")}
+            else {
+              alert("Nieprawidłowy wybór dotyczący oddechów.");
+            }
+            } else {
+              alert("Nieprawidłowy wybór dotyczący oddechów.");
+            }
+          } else {
+            alert("Nieprawidłowy wybór dotyczący reakcji.");
+          }
+        } else {
+          alert("Nieprawidłowy wybór wydarzenia.");
+        }
+      }
+    </script>
+</head>
+<body>
+<div id="background">
+</div>
+
+<div class="logo col-12">
+    <img src="logo-wszop.png" alt="Logo WSZOP">
+</div>
+
+<div id="modul">
+    Wybór modułu: <br><br>
+</div>
+
+<div id="choice">
+    <div class="margin">
+            <button class="btn btn-primary" onclick="coSieWydarzylo('zlamanie')">Złamanie kończyny</button>
+    <button  class="btn btn-secondary" onclick="coSieWydarzylo('akcjaSerca')">Zatrzymanie akcji serca</button>
+        
+    </div>
+</div>
+
+<div id="question"></div>
+
+<footer>
+    &copy; Wojciech Radzki WSZOP 2023
+</footer>
+<h1>Pytania medyczne</h1>
+<button onclick="wydarzenie('zlamanie')">Złamanie kończyny</button>
+<button onclick="wydarzenie('akcjaSerca')">Zatrzymanie akcji serca</button>
+
+</body>
+</html>

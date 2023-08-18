@@ -1,0 +1,68 @@
+body{
+    background-image: url("logo-wszop-0_1.jpg");
+    background-size:10%;
+}
+
+.logo
+{   
+    transform:scale(0.5);
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+#modul
+{
+    font-size: 50px;
+    text-align: center;
+}
+
+#choice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:35px;
+}
+
+#block
+{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    font-size:35px;
+}
+#app, #cours
+{
+    border: 1vh solid black;
+    width:20vh;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 25px 15px 25px;
+    padding:5px
+}
+
+.btn
+{
+  
+    width: 10rem;
+}
+
+
+.clear
+{
+    clear:both;
+}
+
+footer
+{
+   text-align: center;
+   margin-top:10rem;
+}
+
+.margin
+{
+    margin:10px;
+}
